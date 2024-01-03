@@ -34,8 +34,6 @@ class Role_Syncing(commands.Cog):
         
         member_uuid = member_info.uuid
 
-
-
         await interaction.user.remove_roles(self.bot.unverifiedRole, reason="Sync Command")
         for member in guild_members:
             if member['uuid'] == member_uuid:
